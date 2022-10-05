@@ -128,7 +128,7 @@ public class Silly implements Comparable<Silly>{
 //        System.out.println(x.countStatic()); // 3
 //        System.out.println(y.countStatic());
 
-        int[] expected_values = {1, 1, 2, 3};
+        int[] expected_values = {0, 1, 2, 3};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
@@ -174,7 +174,7 @@ public class Silly implements Comparable<Silly>{
 
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
-        if (!o.equals(this.name)){
+        if (!((Silly) o).name.equals(this.name)){
             return false;
         }
         return true;
